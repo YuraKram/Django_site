@@ -1,0 +1,36 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Массаж
+{% endblock %}
+
+{% block content %}
+ <script>
+        function setValue(val) {
+            document.getElementById("value_Task").value = val;
+        }
+ </script>
+<center><h1 class="text" style="color:  rgb(255, 255, 255);">Создать отзыв</h1></center>
+    <form method="post">
+        {% csrf_token %}
+        <div class="rating-area" style="font-style:normal; margin-left: -3%;">
+            <input onclick="setValue(5)" type="radio" id="star-5" name="rating" value="5">
+            <label for="star-5" title="Оценка «5»"></label>
+            <input onclick="setValue(4)" type="radio" id="star-4" name="rating" value="4">
+            <label for="star-4" title="Оценка «4»"></label>
+            <input onclick="setValue(3)" type="radio" id="star-3" name="rating" value="3">
+            <label for="star-3" title="Оценка «3»"></label>
+            <input onclick="setValue(2)" type="radio" id="star-2" name="rating" value="2">
+            <label for="star-2" title="Оценка «2»"></label>
+            <input onclick="setValue(1)" type="radio" id="star-1" name="rating" value="1">
+            <label for="star-1" title="Оценка «1»"></label>
+        </div>
+        <h9>&nbsp</h9>
+        <input type="hidden" name="value" id="value_Task" value="0">
+        {{ form.name }}<br>
+        {{ form.text }}<br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
+

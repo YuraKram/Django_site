@@ -1,0 +1,16 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Массаж
+{% endblock %}
+
+{% block content %}
+<center><h1 class="text" style="color:  rgb(255, 255, 255);">Создать комментарий</h1></center>
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.autor }}<br>
+        {{ form.comment }}<br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

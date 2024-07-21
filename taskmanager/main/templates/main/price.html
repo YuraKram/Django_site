@@ -1,0 +1,165 @@
+{% extends 'main/base.html'%}
+
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">№</th>
+      <th scope="col">Услуга</th>
+      <th scope="col">Стоимость</th>
+      <th scope="col">Время</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i class="fa-solid fa-1" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"  aria-label="Slide 1"></i></td>
+      <td>Массаж шейно-воротниковой зоны</td>
+      <td>500 рублей</td>
+      <td>30 минут</td>
+    <tr>
+      <th> <i class="fa-solid fa-2" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"  aria-label="Slide 1"></i></th>
+      <td>Массаж спины</td>
+      <td>700 рублей</td>
+      <td>45 минут</td>
+    <tr>
+      <th> <i class="fa-solid fa-3" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"  aria-label="Slide 3"></i></th>
+      <td>Массаж ягодиц</td>
+      <td>300 рублей</td>
+      <td>15 минут</td>
+    </tr>
+    <tr>
+      <th><i class="fa-solid fa-4" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"  aria-label="Slide 1"></i></th>
+      <td>Массаж живота</td>
+      <td>200 рублей</td>
+      <td>20 минут</td>
+    </tr>
+  <tr>
+      <th> <i class="fa-solid fa-5" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"  aria-label="Slide 1"></i></th>
+      <td>Массаж ног</td>
+      <td>300 рублей</td>
+      <td>20 минут</td>
+    </tr>
+  <tr>
+      <th> <i class="fa-solid fa-6" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" ></i></th>
+      <td>Массаж груди</td>
+      <td>200 рублей</td>
+      <td>10 минут</td>
+    </tr>
+  <tr>
+      <th> <i class="fa-solid fa-7" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"  aria-label="Slide 1"></i></th>
+      <td>Массаж рук</td>
+      <td>200 рублей</td>
+      <td>15 минут</td>
+    </tr>
+  <tr>
+      <th> <i class="fa-solid fa-8" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"  aria-label="Slide 1"></i></th>
+      <td>Массаж стоп</td>
+      <td>500 рублей</td>
+      <td>30 минут</td>
+    </tr>
+  <tr>
+      <th> <i class="fa-solid fa-9" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"  aria-label="Slide 1"></i></th>
+      <td>Массаж всего тела</td>
+      <td>1500 рублей</td>
+      <td>90 минут</td>
+    </tr>
+  <tr>
+      <th> <i class="fa-solid fa-1" data-bs-target="#carouselExampleDark" data-bs-slide-to="9"  aria-label="Slide 1"></i><i class="fa-solid fa-0" data-bs-target="#carouselExampleDark" data-bs-slide-to="9"  aria-label="Slide 1"></i></th>
+      <td>Массаж ягодиц + спины</td>
+      <td>1000 рублей</td>
+      <td>60 минут</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
+    </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="media/images/shea_c2t8EPK.jpg" width=1300 height="800" сlass="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Массаж шейно-воротниковой зоны</h5>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img src="media/images/spina_Rn3aH0y.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Спины</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="media/images/iagod_9VuheEV.jpg" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж ягодиц</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/chivot_Wu6sKD3.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж живота</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/leg_z3hHx7e.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж ног</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/sisi_R5UANeU.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж груди</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/hend_ETqb78F.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж рук</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/stop_8LIN9US.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж стоп</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/all_8EsWR2N.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж всего тела</h5>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="media/images/spina_iagod_OsGpYdj.jpg" width="1000" height="800" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Массаж ягодиц + спины</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<h3>&nbsp</h3>
+{% endblock %}

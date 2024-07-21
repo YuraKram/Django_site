@@ -1,0 +1,109 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+<center><h1><font color="white" face="fw-normal"> Отзывы</font> </h1></center>
+{% if tasks %}
+    {% for task in tasks %}
+            {% if task.value == 0 %}
+                <div class="alert alert-light mt-2" style="font-style:italic">
+                    <h3>{{ task.name }}</h3>
+                    <p>{{ task.text }}</p>
+                </div>
+            {% endif %}
+            {% if task.value == 1 %}
+                <div class="alert alert-light mt-2" style="font-style:italic">
+                    <div class="rating-result" style="font-style:normal; margin-left: 0%;">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3>{{ task.name }}</h3>
+                    <p>{{ task.text }}</p>
+                </div>
+            {% endif %}
+            {% if task.value == 2 %}
+                <div class="alert alert-light mt-2" style="font-style:italic">
+                    <div class="rating-result" style="font-style:normal; margin-left: 0%;">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3>{{ task.name }}</h3>
+                    <p>{{ task.text }}</p>
+                </div>
+            {% endif %}
+            {% if task.value == 3 %}
+                <div class="alert alert-light mt-2" style="font-style:italic">
+                    <div class="rating-result" style="font-style:normal; margin-left: 0%;">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3>{{ task.name }}</h3>
+                    <p>{{ task.text }}</p>
+                </div>
+            {% endif %}
+            {% if task.value == 4 %}
+                <div class="alert alert-light mt-2" style="font-style:italic">
+                    <div class="rating-result" style="font-style:normal; margin-left: 0%;">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                    <h3>{{ task.name }}</h3>
+                    <p>{{ task.text }}</p>
+                </div>
+            {% endif %}
+            {% if task.value == 5 %}
+                <div class="alert alert-light mt-2" style="font-style:italic">
+                    <div class="rating-result" style="font-style:normal; margin-left: 0%;">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                    </div>
+                    <h3>{{ task.name }}</h3>
+                    <p>{{ task.text }}</p>
+                </div>
+            {% endif %}
+            {% if comments %}
+                {% for comment in comments %}
+                    {% if comment.keys_id == task.id %}
+                        <div style="margin-left: 100px;">
+                            <div class="alert alert-light" style="font-style:italic">
+                            <h3>{{ comment.autor }}</h3>
+                            <p>{{ comment.comment }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        <p style="margin-left: 92%;"> <a href="{% url 'createComment' task.id %}"> <svg xmlns="http://www.w3.org/2000/svg"  height="30" fill="#ffffff" class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+            </svg></a></p>
+    {% endfor %}
+{% else %}
+<p><font  color="white" face="fw-normal">Оставьте первый отзыв!</font></p>
+{% endif %}
+
+<p>
+        <a href="./create"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#ffffff" class="bi bi-plus-circle" viewBox="0 0 32 32">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+</svg></a>
+  </p>
+
+{% endblock %}
